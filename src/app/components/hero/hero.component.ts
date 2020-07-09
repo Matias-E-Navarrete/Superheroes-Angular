@@ -21,8 +21,7 @@ export class HeroComponent implements OnInit {
     this.heroes = this._heroesService.getHeroes();
 
   }
-
-  verHeroe( id: number ){
+  verHeroe(id: number){
     this.router.navigate( [ '/heroe-info', id ] );
   }
 

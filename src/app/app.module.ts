@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 //Routes
 
 import { APP_ROUTING } from './app.routes';
@@ -15,6 +16,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroeInfoComponent } from './components/heroe-info/heroe-info.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 
 
 
@@ -27,10 +30,13 @@ import { HeroeInfoComponent } from './components/heroe-info/heroe-info.component
     HeroComponent,
     AboutComponent,
     HeroeInfoComponent,
+    BusquedaComponent,
+    HeroeTarjetaComponent,
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
+    FormsModule
   ],
   providers: [
     HeroesService,

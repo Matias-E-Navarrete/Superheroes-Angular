@@ -66,9 +66,26 @@ export class HeroesService {
     getHeroe( id: string ){
       return this.heroes[id];
     }
-}
+    buscarHeroes( termino: string): Heroes[]{
 
+      let arrayHeroes: Heroes[] = [];
+      termino = termino.toLowerCase();
+
+      for ( let i = 0; i < this.heroes.length; i++ ){
+
+        let heroe = this.heroes[i];
+        let nombre = heroe.nombre.toLowerCase();
+        
+        if ( nombre.indexOf( termino ) >= 0 ){
+          heroe.id = i;
+          arrayHeroes.push( heroe );
+        }
+      }
+      return arrayHeroes;
+    }
+}
 export interface Heroes {
+    id?: number;
     nombre: string;
     bio: string;
     img: string;
